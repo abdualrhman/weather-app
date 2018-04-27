@@ -6,7 +6,6 @@ export default class WeatherList extends React.Component {
     return (
       <div>
       <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-
       {
         loading &&
         <div>
@@ -31,37 +30,3 @@ export default class WeatherList extends React.Component {
     );
   }
 }
-//{list && <p>{list.main.pressure}</p>}
-//Object.keys(list) > 0
-// <div class="widget" style="margin: 10px; width: 300px;">
-//    <div class="panel panel-info">
-//      <div class="panel-heading">Weather in <b>Copenhagen</b></div>
-//      <ul class="list-group">
-//        <li class="list-group-item">Temperature: <b>5°C</b></li>
-//        <li class="list-group-item">Humidity: <b>65</b></li>
-//        <li class="list-group-item">Wind: <b>11 m/s Øst</b></li>
-//        <li class="list-group-item">
-//            <form class="form-inline">
-//              <div class="form-group">
-//                <input type="text" class="form-control" id="city" placeholder="City">
-//              </div>
-//              <button type="submit" class="btn btn-default">Search</button>
-//            </form>
-//        </li>
-//      </ul>
-//    </div>
-//  </div>
-///////////////////////////////////////////////////////////////
-// <div>
-//   {loading && <p>loading...</p>}
-//   {error && !loading && <p>no data</p>}
-//   {list &&
-//     <div>
-//     <p>{list.name}</p>
-//     <p>{main.temp}</p>
-//     </div>
-//   }
-// </div>
-
-
-//style="margin: 10px; width: 300px;"

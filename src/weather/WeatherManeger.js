@@ -34,7 +34,7 @@ componentDidMount(){
           res.json()
     )
     .then(data => {
-      this.setState({ valueList : data, loading : false, error :false, main : data.main }, ()=>{console.log(this.state.valueList)})
+      this.setState({ valueList : data, loading : false, main : data.main }, ()=>{console.log(this.state.valueList)})
     })
 
   }
@@ -57,10 +57,9 @@ componentDidMount(){
         changeHandler={this.changeFunc}
         city={this.state.cityTarget}
         />
-    
+
         <WeatherList list={this.state.valueList}
         loading={this.state.loading}
-        error={this.state.error}
         main={this.state.main}
         />
       </div>
