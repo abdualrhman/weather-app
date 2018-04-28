@@ -16,3 +16,12 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+.Weather{
+  border:1px solid #4f5863;
+  width: 200px;
+  margin :20px auto ;
+  padding :10px;
+}
+.CityName{
+  color:#13efb1;
+}
