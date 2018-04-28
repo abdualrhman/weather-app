@@ -1,4 +1,4 @@
-// AIzaSyCfJveGFmhltKLT8tLRZlq5k5rInbuzSnk
+//apiKey:AIzaSyCfJveGFmhltKLT8tLRZlq5k5rInbuzSnk
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
