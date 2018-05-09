@@ -1,20 +1,7 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
-.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 .Weather{
   border:1px solid #4f5863;
@@ -24,4 +11,99 @@ body {
 }
 .CityName{
   color:#13efb1;
+}
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+
+
+body {
+	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+}
+.weather-container{
+	width:70vh;
+	height: 50vh;
+	margin :20px auto;
+	display:flex;
+	flex-direction: row;
+
+
+}
+.currentTemp{
+	width:500px;
+background: rgb(41, 41, 41);
+}
+.foo{
+	height:81%;
+}
+
+.bla{
+	width:100%;
+	height:50%;
+}
+.info{
+	height:19%;
+	width:100%;
+	position: relative;
+	background: rgb(42, 178, 234);
+	font-weight: 700;
+	color: rgb(255, 255, 255);
+	text-align: center;
+
+}
+.rain {
+	width: 30%;
+	position: absolute;
+	left: 10px;
+	/* word-spacing: 60px; */
+	top: 30%;
+}
+.rain::before{
+	/* display: block; */
+
+	font-family: weathericons;
+	font-size: 40px;
+	/* left: 6px; */
+	top: -4px;
+	position: absolute;
+}
+.wind {
+	width: 30%;
+	position: absolute;
+	right: 10px;
+	word-spacing: 60px;
+	top: 3px;
+}
+.wind::before{
+	display: block;
+	content: '\f050';
+	font-family: weathericons;
+	font-size: 25px;
+	left: -10px;
+	position: absolute;
+	top: 5px;
+}
+.temp{
+	font-size: 60px;
+text-align: center;
+display: block;
+font-weight: 300;
+color: rgb(255, 255, 255);
+padding: 20px 0 0;
+}
+.location{
+	color: rgb(255, 255, 255);
+text-align: center;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 20px;
+display: block;
+}
+.form {
+		margin:2%;
+		 text-align: center;
+}
+.btn{
+  margin :5px;
 }

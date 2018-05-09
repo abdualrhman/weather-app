@@ -54,21 +54,25 @@ componentDidMount(){
   }
   render() {
     return (
-      <div>
-        <WeatherForm
-        showHandler={this.showFunc}
-        changeHandler={this.changeFunc}
-        city={this.state.cityTarget}
-        />
+      <div>{this.state.valueList &&
+        <div>
+          <WeatherForm
+          showHandler={this.showFunc}
+          changeHandler={this.changeFunc}
+          city={this.state.cityTarget}
+          />
 
-        <WeatherList list={this.state.valueList}
-        loading={this.state.loading}
-        main={this.state.main}
-        />
-        {this.state.valueList &&
-        <SimpleMap center={{lat: this.state.valueList.coord.lat,
-        lng:this.state.valueList.coord.lon}}/>}
-      </div>
+          <WeatherList list={this.state.valueList}
+          loading={this.state.loading}
+          main={this.state.main}
+          center={{lat: this.state.valueList.coord.lat,
+          lng:this.state.valueList.coord.lon}}
+          />
+        </div>
+      }</div>
+
     );
   }
 }
+// <SimpleMap center={{lat: this.state.valueList.coord.lat,
+// lng:this.state.valueList.coord.lon}}/>

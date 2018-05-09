@@ -1,8 +1,9 @@
 import React from 'react'
+import SimpleMap from '../maps/index.js'
 import '../index.css'
 export default class WeatherList extends React.Component {
   render() {
-    const {list, loading, main} =this.props
+    const {list, loading, main, center} =this.props
     return (
       <div>
       {
@@ -13,24 +14,42 @@ export default class WeatherList extends React.Component {
         </div>
       }
       { list &&
-        <div className='Weather'>
-          <p className='CityName'><b>{list.name}</b></p>
-          <p><b>{main.temp}</b>℃</p>
-          <p><b>{list.weather[0].description}</b></p>
-       </div>
+        <div className="weather-container">
+
+        		<div className="currentTemp">
+              <div className='foo'>
+        			 <span className="temp">{Math.trunc(main.temp)}&deg;</span>
+        			  <span className="location">{list.name}</span>
+                </div>
+                <div className="info">
+                  <span className="rain">{list.weather[0].description}</span>
+        				  <span className="wind">10 MPH</span>
+        			   </div>
+        		</div>
+            <div className='bla'>
+            <SimpleMap className="map" center={center}/>
+              </div>
+          {console.log(center.lat)}
+          <div>
+
+          </div>
+        </div>
+
      }
      </div>
     );
   }
 }
-// <div className="widget">
-//  <div className="panel panel-info">
-//    <div className="panel-heading">Weather in <b>{list.name}</b></div>
-//    <ul className="list-group">
-//      <li className="list-group-item">Temperature: <b>{main.temp}°C</b></li>
-//      <li className="list-group-item">Humidity: <b>{main.humidity}</b></li>
-//      <li className="list-group-item">Wind: <b>{list.wind.speed} m/s</b></li>
+
 //
-//    </ul>
-//  </div>
+// <SimpleMap center={{lat: this.props.center.lat,
+// this.props.center.lon}}/>
+
+//center={{lat: this.state.valueList.coord.lat,
+// lng:this.state.valueList.coord.lon}}
+
+// <div className='Weather'>
+//   <p className='CityName'><b>{list.name}</b></p>
+//   <p><b>{main.temp}</b>℃</p>
+//   <p><b>{list.weather[0].description}</b></p>
 // </div>
