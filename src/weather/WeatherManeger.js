@@ -8,7 +8,9 @@ import SimpleMap from '../maps/index.js'
 full url
 http://api.openweathermap.org/data/2.5/weather?q=copenhagen&appid=a5a8f2f0a0571c3d425f6ad15260911c&units=metric
 */
-const newUrl = 'http://api.openweathermap.org/data/2.5/weather?q='
+//http://vejr.eu/api.php?location=copenhagen&degree=C
+const newUrl = 'https://api.openweathermap.org/data/2.5/weather?q='
+
 const apiKey = '&appid=a5a8f2f0a0571c3d425f6ad15260911c&units=metric'
 export default class WeatherManeger extends React.Component {
   constructor(props){
