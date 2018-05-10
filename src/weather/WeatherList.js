@@ -40,16 +40,3 @@ export default class WeatherList extends React.Component {
     );
   }
 }
-
-//
-// <SimpleMap center={{lat: this.props.center.lat,
-// this.props.center.lon}}/>
-
-//center={{lat: this.state.valueList.coord.lat,
-// lng:this.state.valueList.coord.lon}}
-
-// <div className='Weather'>
-//   <p className='CityName'><b>{list.name}</b></p>
-//   <p><b>{main.temp}</b>℃</p>
-//   <p><b>{list.weather[0].description}</b></p>
-// </div>
