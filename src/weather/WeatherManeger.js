@@ -1,7 +1,6 @@
 import React from 'react'
 import WeatherForm from './WeatherForm.js'
 import WeatherList from './WeatherList.js'
-import SimpleMap from '../maps/index.js'
 
 
 /*
@@ -25,7 +24,6 @@ export default class WeatherManeger extends React.Component {
   }
 componentDidMount(){
   this.fetchData()
-
 }
 
   fetchData(){
@@ -70,9 +68,6 @@ componentDidMount(){
           />
         </div>
       }</div>
-
     );
   }
 }
-// <SimpleMap center={{lat: this.state.valueList.coord.lat,
-// lng:this.state.valueList.coord.lon}}/>

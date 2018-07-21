@@ -9,7 +9,7 @@ export default class WeatherForm extends React.Component {
             placeholder='Enter city name'
             onChange={this.props.changeHandler}
             />
-              <button class='btn btn-sm btn-success' onClick={this.props.showHandler}>Go</button>
+              <button className='btn btn-sm btn-success' onClick={this.props.showHandler}>Go</button>
           </div>
     );
   }

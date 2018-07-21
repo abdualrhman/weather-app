@@ -22,7 +22,7 @@ body {
 	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 }
 .weather-container{
-	width:70vh;
+	width:80vh;
 	height: 50vh;
 	margin :20px auto;
 	display:flex;
@@ -93,7 +93,7 @@ color: rgb(255, 255, 255);
 padding: 20px 0 0;
 }
 .location{
-	color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
 text-align: center;
 text-transform: uppercase;
 font-weight: 700;
@@ -101,8 +101,8 @@ font-size: 20px;
 display: block;
 }
 .form {
-		margin:2%;
-		 text-align: center;
+		margin:3%;
+		text-align: center;
 }
 .btn{
   margin :5px;

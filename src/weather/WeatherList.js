@@ -23,7 +23,7 @@ export default class WeatherList extends React.Component {
                 </div>
                 <div className="info">
                   <span className="rain">{list.weather[0].description}</span>
-        				  <span className="wind">10 MPH</span>
+        				  <span className="wind">{list.wind.speed} M/S</span>
         			   </div>
         		</div>
             <div className='bla'>
