@@ -107,3 +107,8 @@ display: block;
 .btn{
   margin :5px;
 }
+.error{
+	text-align: center;
+	margin-top: 25vh;
+	color : red;
+}
