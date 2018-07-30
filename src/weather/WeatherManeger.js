@@ -46,7 +46,7 @@ componentDidMount(){
   })
 })
     .then(data => {
-      this.setState({ valueList : data, loading : false, main : data.main})
+      this.setState({ valueList : data,error: false, loading : false, main : data.main})
     })
     .catch(error=>{
       console.log(error)
