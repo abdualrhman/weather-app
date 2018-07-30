@@ -3,16 +3,15 @@ import SimpleMap from '../maps/index.js'
 import '../index.css'
 export default class WeatherList extends React.Component {
   render() {
-    const {list, loading, main, center} =this.props
+    const {list, loading, main, center, error} =this.props
     return (
       <div>
       {
         loading &&
-        <div>
-        <p>loading...</p>
-        <div className="loader"></div>
-        </div>
+        <div className='laoder-cont'><div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
       }
+        {error && !loading && <h4 className="error">Please enter a valid city name</h4>}
+
       { list &&
         <div className="weather-container">
 
@@ -29,7 +28,7 @@ export default class WeatherList extends React.Component {
             <div className='bla'>
             <SimpleMap className="map" center={center}/>
               </div>
-        
+
           <div>
 
           </div>

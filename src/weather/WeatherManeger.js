@@ -15,7 +15,7 @@ export default class WeatherManeger extends React.Component {
     this.state={
       valueList : null,
       cityTarget : 'copenhagen',
-      loading : true,
+      loading : false,
       error:false,
       main: {},
     }
@@ -41,12 +41,10 @@ componentDidMount(){
   // throw new Error('Network response was not ok.');
 
   me.setState({
-    error : true
+    error : true,
+    loading:false
   })
 })
-    // .then((res)=>
-    //   console.log(res)
-    // )
     .then(data => {
       this.setState({ valueList : data, loading : false, main : data.main})
     })
@@ -61,7 +59,6 @@ componentDidMount(){
     })
   }
   showFunc(){
-  //  this.setState({valueList : null})
     this.fetchData()
   }
   render() {
@@ -75,13 +72,13 @@ componentDidMount(){
           />
           <WeatherList list={this.state.valueList}
           loading={this.state.loading}
+          error={this.state.error}
           main={this.state.main}
           center={{lat: this.state.valueList.coord.lat,
           lng:this.state.valueList.coord.lon}}
           />
         </div>
       }
-      {this.state.error && <h4 className="error">Please enter a valid city name</h4>}
       </div>
 
     );
