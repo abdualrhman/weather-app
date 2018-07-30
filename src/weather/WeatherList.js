@@ -29,7 +29,7 @@ export default class WeatherList extends React.Component {
             <div className='bla'>
             <SimpleMap className="map" center={center}/>
               </div>
-          {console.log(center.lat)}
+        
           <div>
 
           </div>

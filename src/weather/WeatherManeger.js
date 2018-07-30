@@ -42,13 +42,13 @@ componentDidMount(){
 
   me.setState({
     error : true
-  }, ()=>{console.log(me.state.error+'erererererererer')})
+  })
 })
     // .then((res)=>
     //   console.log(res)
     // )
     .then(data => {
-      this.setState({ valueList : data, loading : false, main : data.main}, ()=>{console.log(this.state.valueList)})
+      this.setState({ valueList : data, loading : false, main : data.main})
     })
     .catch(error=>{
       console.log(error)
@@ -61,7 +61,7 @@ componentDidMount(){
     })
   }
   showFunc(){
-    this.setState({valueList : null})
+  //  this.setState({valueList : null})
     this.fetchData()
   }
   render() {
