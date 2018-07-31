@@ -86,7 +86,7 @@ font-size: 20px;
 display: block;
 }
 .form {
-		margin:3%;
+		margin-top: 5%;
 		text-align: center;
 }
 .btn{
@@ -94,8 +94,10 @@ display: block;
 }
  .error{
 	text-align: center;
-	 margin: 10vh;
 	color : red;
+}
+.handler{
+	height:30px;
 }
 
 
@@ -104,7 +106,7 @@ display: block;
 */
 .laoder-cont{
 	text-align: center;
-	 margin: 10vh; 
+	 /* margin: 10vh; */
 }
 .lds-ellipsis {
   display: inline-block;

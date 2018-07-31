@@ -4,7 +4,7 @@ import WeatherList from './WeatherList.js'
 
 
 /*
-full api url
+full weather api url
 http://api.openweathermap.org/data/2.5/weather?q=copenhagen&appid=a5a8f2f0a0571c3d425f6ad15260911c&units=metric
 */
 const newUrl = 'https://api.openweathermap.org/data/2.5/weather?q='
