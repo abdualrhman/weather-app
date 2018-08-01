@@ -6,76 +6,33 @@
 body {
 	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 }
-.weather-container{
-	width:80vh;
-	height: 50vh;
-	margin :20px auto;
-	display:flex;
-	flex-direction: row;
-
-
+.description {
+	font-size: 15px;
+	width: 50%;
 }
-.currentTemp{
-	width:500px;
-background: rgb(41, 41, 41);
+.wind{
+	width: 50%;
 }
-.foo{
-	height:81%;
-}
-
-.bla{
-	width:100%;
-	height:50%;
-}
-.info{
-	height:19%;
-	width:100%;
-	position: relative;
-	background: rgb(42, 178, 234);
-	font-weight: 700;
-	color: rgb(255, 255, 255);
-	text-align: center;
-
-}
-.rain {
-	width: 30%;
-	position: absolute;
-	left: 10px;
-	/* word-spacing: 60px; */
-	top: 30%;
-}
-.rain::before{
-	/* display: block; */
-
-	font-family: weathericons;
-	font-size: 40px;
-	/* left: 6px; */
-	top: -4px;
-	position: absolute;
-}
-.wind {
-	width: 30%;
-	position: absolute;
-	right: 10px;
-	word-spacing: 60px;
-	top: 3px;
-}
-.wind::before{
-	display: block;
+.wind::after{
 	content: '\f050';
 	font-family: weathericons;
 	font-size: 25px;
-	left: -10px;
-	position: absolute;
-	top: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.wind-unit{
+	margin-top: 10%;
+}
+.wind-speed{
+
 }
 .temp{
-	font-size: 60px;
+font-size: 60px;
 text-align: center;
 display: block;
 font-weight: 300;
 color: rgb(255, 255, 255);
-padding: 20px 0 0;
 }
 .location{
 color: rgb(255, 255, 255);
@@ -90,7 +47,7 @@ display: block;
 		text-align: center;
 }
 .btn{
-  margin :5px;
+  margin-left :5px;
 }
  .error{
 	text-align: center;
@@ -99,6 +56,76 @@ display: block;
 .handler{
 	height:30px;
 }
+@media (min-width: 725px) {
+	.weather-container{
+			width:60%;
+			height: 50%;
+			display:flex;
+			margin: 25%;
+			flex-direction: row;
+			margin-top: 20px;
+	}
+	.currentTemp{
+	width:27%;
+	background: rgb(41, 41, 41);
+	min-width: 225px;
+	}
+	.temp-header{
+		height:81.1%;
+	}
+	.map{
+		width:73%;
+		height:50vh;
+		min-width: 225px;
+	}
+	.info{
+		height:19%;
+		width:100%;
+		background: rgb(42, 178, 234);
+		font-weight: 700;
+		color: rgb(255, 255, 255);
+		text-align: center;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content:space-between;
+		padding-top: 4%;
+	}
+}
+
+@media (max-width: 725px) {
+	.weather-container{
+ 		width:100%;
+ 		height: 44vh;
+ 		margin-top :17px;
+ 		display:flex;
+ 		flex-direction: column;
+ 	}
+	.info{
+		height:22%;
+		width:100%;
+		background: rgb(42, 178, 234);
+		font-weight: 700;
+		color: rgb(255, 255, 255);
+		text-align: center;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content:space-between;
+		padding: 1%;
+	}
+ 	.currentTemp{
+ 	width:100%;
+	height: 90%;
+ 	background: rgb(41, 41, 41);
+	min-width: 200px;
+ 	}
+ 	.temp-header{
+ 		height:78.1%;
+ 	}
+ 	.map{
+ 		width:100%;
+ 		height:40vh;
+ 	}
+}
 
 
 /*
@@ -106,7 +133,6 @@ display: block;
 */
 .laoder-cont{
 	text-align: center;
-	 /* margin: 10vh; */
 }
 .lds-ellipsis {
   display: inline-block;

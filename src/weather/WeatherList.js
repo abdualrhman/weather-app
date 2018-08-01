@@ -18,16 +18,16 @@ export default class WeatherList extends React.Component {
       { list &&
         <div className="weather-container">
         		<div className="currentTemp">
-              <div className='foo'>
+              <div className='temp-header'>
         			 <span className="temp">{Math.trunc(main.temp)}&deg;</span>
         			  <span className="location">{list.name}</span>
                 </div>
                 <div className="info">
-                  <span className="rain">{list.weather[0].description}</span>
-        				  <span className="wind">{list.wind.speed} M/S</span>
+                  <div className="description">{list.weather[0].description}</div>
+        				  <div className="wind"><span className='wind-speed'>{list.wind.speed}</span> <span className='wind-unit'>M/S</span></div>
         			   </div>
         		</div>
-            <div className='bla'>
+            <div className='map'>
             <SimpleMap className="map" center={center}/>
               </div>
 
